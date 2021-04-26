@@ -1,0 +1,221 @@
+:root{
+    /* fuentes */
+    --heading: 'Cantata One', serif;
+    --text: 'Prata', serif;
+    --logo: 'Sirin Stencil', cursive;
+
+    /* colores */
+    --azulOscuro: #2E3C48;
+    --azulClaro: #87BDE9;
+    --azulNaval: #092639;
+    --azul: #6C97BD;
+    --cafe: #857B78;
+    --cafeOscuro: #515151;
+    --gris: #C9D7E0;
+    --grisT: rgba(201, 215, 224, .8);
+    --gris2T: rgba(201, 215, 224, .2);
+}
+
+html{
+    box-sizing: border-box; /* hace que el padding y el border pase a formar parte del calculo del ancho de la caja y no lo suman */
+    font-size: 62.5%; /* 10px = 1rem */
+}
+*,
+*:before,
+*:after{
+    box-sizing: inherit; /* heredar propiedad box-sizing si se usa otro selector */
+}
+body{
+    font-family: var(--text);
+    font-size: 1/6rem;
+    line-height: 1.7rem;
+}
+
+/* globales */
+.contenedor{ /* centar horizontalmente */
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+}
+h1,h2,h3,h4{
+    font-family: var(--heading);
+    line-height: 1.2rem;
+}
+h1{
+    font-size: 5rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3.2rem;
+}
+h4{
+    font-size: 2.8rem;
+}
+
+img{
+    max-width: 100%; /* imagenes responsive */
+}
+
+/* Hedader */
+.webp .header {
+    background-image: url(../img/mountains.webp);
+}
+.no-webp .header {
+    background-image: url(../img/mountains.jpg);
+}
+.header{
+    height: 66rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center ;
+}
+.header_texto{
+    display: flex;
+    justify-content: center;
+    margin-top: 9rem;
+    text-align: center;
+    color: var(--gris);
+}
+.slogan{
+    color: var(--grisT);
+    margin: 0;
+    font-family: var(--logo);
+    font-size: 18rem;
+    text-transform: uppercase;
+    line-height: .8;
+    width: 50rem;
+}
+
+.header__fondo{
+    background-color: var(--gris2T);
+    height: 8rem;
+}
+
+.barra{
+    display: flex;
+    /* flex-direction: column; */
+}
+@media (min-width: 768px) {
+    .barra{
+        padding-top: 4rem;
+        justify-content:space-between;
+    }
+}
+
+.logo{
+    color: var(--azulOscuro);
+}
+.logo__nombre{
+    font-weight: 550;
+    text-align: center;
+    margin: 0;
+}
+
+.navegacion{
+    display: flex;
+    gap: 2rem;
+}
+.navegacion__enlace{
+    color: var(--azulOscuro);
+    font-size: 2rem;
+    font-weight:500 ;
+}
+
+/* Experiences */
+.experiences__title{
+    color: var(--azulOscuro);
+    margin: 5rem 0;
+    text-align: center;
+}
+
+.galeria{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 3rem 1fr 3rem 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+.galeria__imagen{
+    min-height: 22rem;
+}
+
+/* Plans */
+.plans{
+    margin-top: 5rem;
+    background-color: var(--azulOscuro);
+}
+.plans__title{
+    color: var(--azulClaro);
+    margin: 0;
+    padding: 5rem;
+    text-align: center;
+}
+
+.plans__contenedor{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 3rem 1fr 3rem 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+.plans-kind{
+    background-color: var(--azulNaval);
+    padding: 1rem;
+
+}
+.plans-kind__title{
+    color: var(--cafe);
+    text-align: center;
+    margin-top: 2rem;
+}
+.plans__contenedor-imagen{
+    margin-inline: 1rem;
+}
+.plans__text{
+    color: var(--azulClaro);
+    font-family: var(--text);
+    font-size: 2rem;
+    margin: 2rem 0;
+    padding: 0 1.5rem;
+    line-height:2.4rem;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    margin-block: 1rem;
+}
+.plans__button{
+    background-color: var(--cafeOscuro);
+    color: var(--cafe);
+    font-size: 2.5rem;
+    font-family: var(--heading);
+    font-weight: bolder;
+    padding: 2rem 3rem;
+    
+    text-transform: uppercase;
+    text-align: center;
+ 
+}
+
+/* Footer */
+.footer{
+    background-color: var(--cafe);
+}
+.footer__barra{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer__slogan{
+    color: var(--gris2T);
+    font-size: 5rem;
+    width: auto;
+}
+.footer__nombre{
+    color: var(--cafeOscuro);
+}
